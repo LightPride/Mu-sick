@@ -1,3 +1,14 @@
+:root {
+  --primary-white: rgb(244, 245, 240);
+  --primary-orange: rgb(198, 81, 15);
+  --primary-red: rgb(208, 56, 10);
+  --background-white: rgb(255, 255, 255);
+  --background-black: rgb(0, 0, 0);
+  --typography-white: rgb(244, 245, 240);
+  --typography-black: rgb(25, 25, 25);
+  --typography-grey: rgb(64, 65, 60);
+}
+
 @font-face {
   font-family: 'Nohemi';
   src:
@@ -64,4 +75,243 @@ img {
 
 button {
   cursor: pointer;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 60px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1320px;
+  }
+}
+
+.navigation-label {
+  color: var(--typography-grey);
+  font-family: Nohemi;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* HOME */
+.home {
+  padding-top: 210px;
+  height: 100vh;
+  position: relative;
+  background-image: url('./assets/backgrounds/main-bg.webp');
+  background-size: cover;
+}
+.home-bg {
+  position: absolute;
+}
+
+.home_cta {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home_cta-text {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 93%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.home_cta-button {
+  display: block;
+  cursor: pointer;
+  background-color: inherit;
+  padding: 20px 30px;
+  color: var(--typography-white);
+  border-color: var(--typography-white);
+  border: 2px solid rgb(244, 245, 240);
+}
+
+.home_middle-block {
+  margin-top: 90px;
+  display: flex;
+}
+
+.home_middle-block-image {
+  max-width: 680px;
+  height: 417px;
+}
+
+.home_middle-block-text-wrapper {
+  max-width: 270px;
+  margin-left: 225px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100.52%;
+  text-align: left;
+  font-family: Nohemi;
+  color: var(--typography-white);
+  margin-top: 40px;
+}
+
+.home_middle-block-text1,
+.home_middle-block-text2 {
+  display: block;
+  margin-top: 40px;
+}
+
+.home_middle-block-arrow {
+  margin-top: 40px;
+}
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+
+.header {
+  position: fixed;
+
+  width: 100%;
+  height: 124px;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  border-radius: 0 0 30px 30px;
+
+  transition: 300ms;
+  z-index: 10;
+}
+
+.header__visible {
+  top: 0;
+}
+
+.header__hidden {
+  top: -124px;
+}
+
+.header-wrapper {
+  display: flex;
+  width: 1320px;
+  height: 100%;
+}
+
+.header-logo {
+  width: 90px;
+  height: 87px;
+}
+
+.header-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 158.5px;
+  margin-left: 913px;
+}
+
+.header-nav__item {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav__link {
+  position: relative;
+
+  padding-left: 15px;
+
+  color: rgb(244, 245, 240);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.header-nav__link:hover {
+  color: rgb(208, 56, 10);
+}
+
+.header-nav__bracket {
+  position: absolute;
+  transition: 300ms;
+}
+
+.header-nav__bracket:first-child {
+  left: 0;
+}
+
+.header-nav__bracket:last-child {
+  left: 6px;
+}
+
+.header-nav__link:hover .header-nav__bracket:last-child {
+  left: 100% + 6px;
+}
+
+.header-social__list {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 12px;
+
+  width: 158.5px;
+  height: 24px;
+}
+
+.header-social__icon {
+  width: 24px;
+  height: 24px;
+
+  fill: white;
+  stroke: white;
+}
+
+.header-social__icon:hover {
+  fill: rgb(208, 56, 10);
+  stroke: rgb(208, 56, 10);
+}
+
+.header-btn {
+  position: fixed;
+  top: 40px;
+  right: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  border: 2px solid white;
+  border-radius: 100%;
+  transform: rotate(90deg);
+
+  color: white;
+  font-size: 24px;
+
+  transition: 300ms;
+  z-index: 9;
+}
+
+.header-btn__hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.header-btn__wisible {
+  pointer-events: all;
+  opacity: 1;
 }
