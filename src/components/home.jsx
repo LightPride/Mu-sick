@@ -1,13 +1,32 @@
 import musick from '../assets/styled-words/mu-sick.webp';
 import arrow from '../assets/arrow.webp';
+import { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+
 export const Home = () => {
+  const el = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        'This isn’t just music it’s a fucking<br/>revolution. Are you ready?',
+      ],
+      typeSpeed: 30,
+      loop: true,
+      backDelay: 3000,
+      backSpeed: 20,
+      showCursor: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div id="home" className="home">
       <div className="container">
         <div className="home_cta">
-          <span className="home_cta-text">
-            This isn’t just music it’s a fucking revolution. Are you ready?
-          </span>
+          <span ref={el} className="home_cta-text"></span>
           <a href="#pre-register" className="home_cta-button">
             <span className="home_cta-button-text">Pre-register</span>
           </a>

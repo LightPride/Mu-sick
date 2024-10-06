@@ -5,7 +5,7 @@ export const News = () => {
     <div className="news">
       <div className="container">
         <span id="news" className="navigation-label">
-          [News]
+          {'[News]'}
         </span>
         <NewsSlider />
       </div>

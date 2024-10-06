@@ -6,6 +6,7 @@ import { OurMusicians } from './components/our-musicians';
 import { WorkWithUs } from './components/work-with-us';
 import { OurTeam } from './components/our-team';
 import { News } from './components/news';
+import { Footer } from './components/footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <WorkWithUs />
       <News />
       <OurTeam />
+      <Footer />
     </main>
   );
 }

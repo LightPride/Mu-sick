@@ -6,7 +6,7 @@ export const AboutEvent = () => {
       <div className="container">
         <div className="container-about-spacing">
           <span id="about-event" className="navigation-label">
-            [about]
+            {'[about]'}
           </span>
           <div className="about-block-text">
             <img
@@ -90,20 +90,24 @@ export const AboutEvent = () => {
                 id="pre-register"
                 className="event-register-form"
               >
-                <input
-                  className="event-register-form_input"
-                  type="text"
-                  name="name"
-                  placeholder="NAME"
-                />
-                <input
-                  className="event-register-form_input"
-                  type="email"
-                  name="email"
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  title="Please enter a valid email address"
-                  placeholder="EMAIL"
-                />
+                <label className="event-register-form_input-label">
+                  <input
+                    className="event-register-form_input"
+                    type="text"
+                    name="name"
+                    placeholder="NAME"
+                  />
+                </label>
+                <label className="event-register-form_input-label">
+                  <input
+                    className="event-register-form_input"
+                    type="email"
+                    name="email"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    title="Please enter a valid email address"
+                    placeholder="EMAIL"
+                  />
+                </label>
               </form>
             </div>
             <button

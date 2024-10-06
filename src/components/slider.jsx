@@ -1,26 +1,32 @@
 import placeholder from '../assets/backgrounds/event-text-card.webp';
+import spotifyPost from '../assets/backgrounds/spotify-post.webp';
+import instaPost from '../assets/backgrounds/instapost.webp';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import Icons from '../assets/svg/sprite.svg';
 
 const newsData = [
   {
-    name: 'NM ✱ Barramundi',
-    image: placeholder,
-    link: `https://open.spotify.com/artist/1Ki9n7WV9D8rwLQoWUgdjS?si=AZ-Ui8-eTru2PsYfBEMzPA`,
-    text: ``,
+    name: 'spotify-post',
+    image: spotifyPost,
+    link: `https://open.spotify.com/playlist/4g4XawS5tTHpPTGFHkEEGY?si=ANYIXh9mROSLF9fB-cRwLg&pi=e-5M3ULAeYRNiP`,
+    textHeader: `THE MÜ-SICK SPOTIFY PLAYLIST`,
+    text: `We’ve collected a wide variety of everything we have to offer just for your listening pleasure.`,
   },
   {
-    name: 'Dyvour ✱',
-    image: placeholder,
-    link: `https://open.spotify.com/artist/4s8QBLbKQfVyxBBFKici0O?si=swYiWnOAT4aUf8d_GBo1Xw`,
-    text: ``,
+    name: 'instapost',
+    image: instaPost,
+    link: `linktr.ee/musick.project`,
+    textHeader: `Check our Linktree`,
+    text: `This ain’t your average music project. WE ARE MÜ-SICK and we’re here to mess things up in the best way possible. Our project is about bringing you the wildest, most experimental musicians doing shit their way. `,
   },
   {
-    name: 'Kristjan ✱ Glück',
+    name: 'documentary',
     image: placeholder,
-    link: `https://open.spotify.com/artist/4wlGofpoCx983N0ts4JOMi?si=0Emh9umAT-mw_q44PshLRw`,
-    text: ``,
+    link: null,
+    textHeader: `MÜ-SICK Documentary`,
+    text: `COMING SOON...`,
   },
 ];
 
@@ -37,8 +43,19 @@ export const NewsSlider = () => {
       <Slider {...settings}>
         {newsData.map((item) => (
           <div key={item.name} className="slider_card">
-            <div className="slider_image"></div>
-            <div>123</div>
+            <img src={item.image} className="slider_image" />
+            <div className="slider_text-block">
+              <div>
+                <h3 className="slider_text-header">{item.textHeader}</h3>
+                <p className="slider_text-info">{item.text}</p>
+              </div>
+              <span className="slider_text-date">
+                <pre>{'25.09.2024    MÜ-SICK'}</pre>
+              </span>
+            </div>
+            <svg className="news-logo">
+              <use href={`${Icons}#news`} width="100%" height="100%"></use>
+            </svg>
           </div>
         ))}
       </Slider>
