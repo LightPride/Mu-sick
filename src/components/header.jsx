@@ -64,7 +64,7 @@ export const Header = () => {
               </li>
 
               <li className="header-nav__item">
-                <a href="#" className="header-nav__link">
+                <a href="#news" className="header-nav__link">
                   <span className="header-nav__bracket">{'[ '}</span>
                   <span className="header-nav__bracket">{'] '}</span>
                   <span className="header-nav__text">News</span>
@@ -72,7 +72,7 @@ export const Header = () => {
               </li>
 
               <li className="header-nav__item">
-                <a href="#" className="header-nav__link">
+                <a href="#our-team" className="header-nav__link">
                   <span className="header-nav__bracket">{'[ '}</span>
                   <span className="header-nav__bracket">{'] '}</span>
                   <span className="header-nav__text">Our team</span>

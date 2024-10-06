@@ -34,6 +34,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'Dark-Comrade';
+  src: url('../fonts/Dark-Comrade.ttf');
+  font-weight: 600;
+}
+
 body {
   background-color: #000;
   /* background-image: url('./assets/background.png'); */
@@ -95,7 +101,7 @@ button {
     width: 768px;
   }
   @media screen and (min-width: 1440px) {
-    width: 1320px;
+    width: 1440px;
   }
 }
 
@@ -156,6 +162,11 @@ button {
   color: var(--typography-white);
   border-color: var(--typography-white);
   border: 2px solid rgb(244, 245, 240);
+  text-transform: uppercase;
+  font-family: Nohemi;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 93%;
 }
 
 .home_middle-block {
@@ -649,11 +660,21 @@ button {
 }
 
 .our-musicians_card-button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
   padding: 20px 30px;
-  text-align: center;
   border: 2px solid var(--typography-white);
+}
+.our-musicians_card-button:visited {
+  color: inherit;
+}
+
+.our-musicians_card-button-svg {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .our-musicians_card-text-container {
@@ -717,14 +738,13 @@ button {
 
 .workWithUs-titles__wrapper {
   display: flex;
+  justify-content: space-between;
   width: 873px;
-  gap: 207px;
 }
 
 .workWithUs-subTitle {
-  display: block;
-  width: 129px;
-  height: 11px;
+  display: flex;
+  height: 100%;
 
   color: var(--typography-grey);
   font-family: Nohemi;
@@ -738,6 +758,8 @@ button {
 
 .workWithUs-title {
   display: block;
+  width: 537px;
+  height: 100%;
 
   font-family: Nohemi;
   font-size: 48px;
@@ -760,6 +782,7 @@ button {
 
   width: 315px;
   height: 159px;
+  margin-top: auto;
   margin-left: 102px;
   padding: 0;
 
@@ -774,6 +797,247 @@ button {
   letter-spacing: 0%;
   text-align: left;
   text-transform: uppercase;
+}
+
+.workWithUs-icon {
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin-left: 10px;
+
+  fill: white;
+  stroke: white;
+}
+
+/* NEWS */
+/* NEWS */
+/* NEWS */
+
+.news {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.slider-wrapper {
+  max-width: 1440px;
+  margin-top: 50px;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-dots > li > button:before {
+  color: rgb(130, 130, 130);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--primary-white);
+}
+
+.slider_card {
+  width: 500px;
+  height: 500px;
+  border: 2px solid var(--primary-white);
+  padding: 20px 20px;
+}
+
+.slider_image {
+  background-image: url('./assets/backgrounds/event-text-card.webp');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+/* .slider-wrapper {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.slider_card {
+  width: 500px;
+  height: 500px;
+  border: 2px solid var(--primary-white);
+  scroll-snap-align: start;
+  padding: 20px 20px;
+}
+
+.slider_image {
+  width: 460px;
+  height: 220px;
+  flex: 1 0 100%;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-white);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover,
+.slider-nav a:focus {
+  opacity: 1;
+} */
+
+/* OUR TEAM */
+/* OUR TEAM */
+/* OUR TEAM */
+
+.our-team {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.our-team_header {
+  color: var(--typography-white);
+  display: block;
+  font-family: Nohemi;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.our-team_header-accent {
+  font-family: Dark-Comrade;
+  color: var(--primary-orange);
+}
+
+.our-team_list {
+  margin-top: 60px;
+  display: flex;
+  gap: 10px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.our-team_list .our-team_list-item {
+  transition: 0.5s;
+  filter: saturate(0);
+  /* filter: sepia();
+  filter: blur();
+  filter: contrast();
+  filter: saturate(); */
+}
+
+.our-team_list .our-team_list-item:hover {
+  filter: saturate(1);
+  transform: translateZ(200px);
+}
+
+.our-team_list .our-team_list-item:hover + * {
+  filter: saturate(0.6);
+  transform: translateZ(150px) rotateY(40deg);
+}
+
+.our-team_list .our-team_list-item:hover + * + * {
+  filter: saturate(0.4);
+  transform: translateZ(70px) rotateY(20deg);
+}
+
+.our-team_list .our-team_list-item:hover + * + * + * {
+  filter: saturate(0.2);
+  transform: translateZ(30px) rotateY(10deg);
+}
+
+.our-team_list .our-team_list-item:has(+ *:hover) {
+  filter: saturate(0.6);
+  transform: translateZ(150px) rotateY(-40deg);
+}
+
+.our-team_list .our-team_list-item:has(+ * + *:hover) {
+  filter: saturate(0.4);
+  transform: translateZ(70px) rotateY(-20deg);
+}
+
+.our-team_list .our-team_list-item:has(+ * + * + *:hover) {
+  filter: saturate(0.2);
+  transform: translateZ(30px) rotateY(-10deg);
+}
+
+.our-team_list-image {
+  width: 210px;
+  height: 320px;
+}
+
+.our-team_info {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-team_info-spacing {
+  display: flex;
+  justify-content: space-between;
+}
+.our-team_info-behind-the-scenes {
+  width: 225px;
+}
+
+.our-team_info-behind-the-scenes_header {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100.52%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.four-team_info-behind-the-scenes-spacing {
+  display: flex;
+  gap: 20px;
+}
+
+.our-team_info-behind-the-scenes_button {
+  width: 92px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px 20px;
+  border: 2px solid var(--typography-white);
+}
+
+.our-team_info-behind-the-scenes_link-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.our-team_info-text1,
+.our-team_info-text2 {
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100.52%;
+  text-align: left;
 }
 
 /* SCROLLBAR */

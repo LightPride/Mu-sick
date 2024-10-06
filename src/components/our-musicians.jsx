@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import Icons from '../assets/svg/sprite.svg';
 
 const musicians = [
   {
     name: 'NM ✱ Barramundi',
     image: null,
-    link: null,
+    link: `https://open.spotify.com/artist/1Ki9n7WV9D8rwLQoWUgdjS?si=AZ-Ui8-eTru2PsYfBEMzPA`,
     text1: `Growing up in the quiet village of Kurna, Estonia, NM Barramundi always knew isolation and managed to turn it into an art form. Despite being a straight-A student with a million hobbies, he felt distant, longing for a neighbor’s kid to hang with. That restlessness brewed a creative fire, one that first took shape in rap.`,
     text2: `After a rough start (recording his first song on a Call of Duty mic in 9th grade), Mundi found his stride in high school after teaming up with producer Hugo. Their first album Madu may not have been perfect, but it caught the attention of DEW8, who recognized his raw talent and pushed him to take music seriously.`,
     text3: `NM Barramundi’s breakthrough came when his track “Mitsubishi Freestyle”, featuring Coffin Dodger, got top marks on Estonia’s Muusikanõunikud, earning him the title of "critically acclaimed" by his friends. His sound is shaped by Kanye West, Earl Sweatshirt, and Jpegmafia, but the result is always unmistakably his own and evolves with every track, from raw bangers to introspective, melodic beats. His latest EP Robotnik is an ironic, dystopian story about a world of abused robots. It’s not something to describe - it must be listened to. `,
@@ -13,7 +14,7 @@ const musicians = [
   {
     name: 'Dyvour ✱',
     image: null,
-    link: null,
+    link: `https://open.spotify.com/artist/4s8QBLbKQfVyxBBFKici0O?si=swYiWnOAT4aUf8d_GBo1Xw`,
     text1: `Dyvour's music is a reflection of the contrasts in his life: isolation mixed with the chaos of internet culture. Growing up far from the hustle and bustle of the city allowed him the space to dive deep into online music. “Internet culture is a large part of how I found more and more weird and interesting music that expanded my taste and interest in the art form."`,
     text2: `His music journey didn’t begin with a grand ambition - it started with a moment of awe. Back in 2014, he saw a performance by Twenty One Pilots at the MTV Movie Awards. Fast forward to 2019, Dyvour finally got to see them live, which was the moment he still credits as a major inspiration for his own stage presence today.`,
     text3: `The name “Dyvour” comes from a random scroll through CIA cryptonyms, meaning a bankrupt man. But for him, it’s not about financial debt. “I personally relate it to being creatively bankrupt, as I feel like I’m an amalgamation of influences and stolen ideas. Originality is something I strive for, although true originality is near-impossible, but that’s just how I feel.”`,
@@ -22,7 +23,7 @@ const musicians = [
   {
     name: 'Kristjan ✱ Glück',
     image: null,
-    link: null,
+    link: `https://open.spotify.com/artist/4wlGofpoCx983N0ts4JOMi?si=0Emh9umAT-mw_q44PshLRw`,
     text1: `Kristjan Glück is a self-taught experimental musician who's never content to stick with one style, but rather constantly evolving, exploring complex issues in his songs and staying unapologetically true to himself. His last three albums (trilogy) are a great way to understand his growth and journey both as a musician and as a person.`,
     text2: `Growing up, music was more of a backdrop until something clicked. “I became obsessed with the details of production and beatmaking,” he says. That obsession led to late-night sessions, experimenting with sound, and learning music theory on his own terms.`,
     text3: `Kristjan Glück’s music is a mix of experimentation and Estonian nostalgia, combined with folklore vibes and sharp lyrics. His latest album, Verekuu serenaad, consists of multi-genre tracks that explore the issues of confidence, ego, and chaos.`,
@@ -31,7 +32,7 @@ const musicians = [
   {
     name: 'Coffin-Dodger ✱',
     image: null,
-    link: null,
+    link: `https://open.spotify.com/artist/5MOVd3pBi5wiI5K60vy6zR?si=N3dedGlRSBG9m5uQG1ovJQ`,
     text1: `Coming out of the gritty streets of Lasnamäe, Tallinn, Coffin Dodger is a shape-shifting force in the underground music scene. His journey isn’t the classic story of growing up in a musically driven household. In fact, music was barely a thing in his family, but sometimes it’s not about where you start - it’s about where you end up. Dodger’s path took him from acoustic guitar sessions in high school to the raw, experimental hip-hop beats. “I started writing songs ‘cause no one else would rap on them. Now, I don’t stop.”`,
     text2: `For five years, Coffin Dodger has been relentlessly dropping tracks that involve samples of nearly every genre, whether it’s folk, indie, hyperpop, or rap. There’s no box big enough to contain his sound. `,
     text3: `His latest project, Dynamo, is a beast of its own. Wacky auto-tune, unpredictable lyrics, and a level of distortion that smashes through any preconceived expectations. Coffin Dodger doesn’t create music for approval, but if it sticks with you (whether you love it or hate it) - he’s done his job.`,
@@ -69,8 +70,12 @@ export const OurMusicians = () => {
             <a
               className="our-musicians_card-button"
               href={selectedMusician.link}
+              target="blank"
             >
               Listen On
+              <svg className="our-musicians_card-button-svg">
+                <use href={`${Icons}#spotify`} width="30px" height="30px"></use>
+              </svg>
             </a>
           </div>
           <div className="our-musicians_card-text-container">

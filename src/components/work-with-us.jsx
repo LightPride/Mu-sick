@@ -1,3 +1,5 @@
+import Icons from '../assets/svg/sprite.svg';
+
 export const WorkWithUs = () => {
   return (
     <section className="workWithUs">
@@ -11,7 +13,12 @@ export const WorkWithUs = () => {
           </h2>
         </div>
 
-        <button className="workWithUs-btn">contact us</button>
+        <button className="workWithUs-btn">
+          contact us
+          <svg className="workWithUs-icon">
+            <use href={`${Icons}#contact`} width="100%" height="100%"></use>
+          </svg>
+        </button>
       </div>
     </section>
   );
