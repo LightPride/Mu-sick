@@ -2,15 +2,15 @@ import musick from '../assets/styled-words/mu-sick.webp';
 import arrow from '../assets/arrow.webp';
 export const Home = () => {
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="container">
         <div className="home_cta">
           <span className="home_cta-text">
             This isn’t just music it’s a fucking revolution. Are you ready?
           </span>
-          <button className="home_cta-button">
+          <a href="#pre-register" className="home_cta-button">
             <span className="home_cta-button-text">Pre-register</span>
-          </button>
+          </a>
         </div>
         <div className="home_middle-block">
           <img className="home_middle-block-image" src={musick} alt="mu-sick" />

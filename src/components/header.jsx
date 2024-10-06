@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Icons from '../assets/svg/sprite.svg';
 
 export const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
 
@@ -14,7 +14,7 @@ export const Header = () => {
     }
 
     setScrollPosition(currentScrollPosition);
-  };
+  }, [scrollPosition]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -22,7 +22,7 @@ export const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [scrollPosition]);
+  }, [handleScroll]);
 
   return (
     <>
@@ -32,7 +32,7 @@ export const Header = () => {
       >
         <div className="container">
           <div className="header-wrapper">
-            <a href="#header">
+            <a>
               <svg className="header-logo">
                 <use href={`${Icons}#logo`} width="100%" height="100%"></use>
               </svg>
@@ -40,33 +40,42 @@ export const Header = () => {
 
             <ul className="header-nav__list">
               <li className="header-nav__item">
+                <a href="#home" className="header-nav__link">
+                  <span className="header-nav__bracket">{'[ '}</span>
+                  <span className="header-nav__bracket">{'] '}</span>
+                  <span className="header-nav__text">Home</span>
+                </a>
+              </li>
+
+              <li className="header-nav__item">
+                <a href="#about-event" className="header-nav__link">
+                  <span className="header-nav__bracket">{'[ '}</span>
+                  <span className="header-nav__bracket">{'] '}</span>
+                  <span className="header-nav__text">About & Event</span>
+                </a>
+              </li>
+
+              <li className="header-nav__item">
+                <a href="#our-musicians" className="header-nav__link">
+                  <span className="header-nav__bracket">{'[ '}</span>
+                  <span className="header-nav__bracket">{'] '}</span>
+                  <span className="header-nav__text">Our musicians</span>
+                </a>
+              </li>
+
+              <li className="header-nav__item">
                 <a href="#" className="header-nav__link">
                   <span className="header-nav__bracket">{'[ '}</span>
-                  <span className="header-nav__bracket">{'] '}</span>Home
+                  <span className="header-nav__bracket">{'] '}</span>
+                  <span className="header-nav__text">News</span>
                 </a>
               </li>
 
               <li className="header-nav__item">
                 <a href="#" className="header-nav__link">
-                  {'[ ]'} About & Event
-                </a>
-              </li>
-
-              <li className="header-nav__item">
-                <a href="#" className="header-nav__link">
-                  {'[ ]'} Our musicians
-                </a>
-              </li>
-
-              <li className="header-nav__item">
-                <a href="#" className="header-nav__link">
-                  {'[ ]'} News
-                </a>
-              </li>
-
-              <li className="header-nav__item">
-                <a href="#" className="header-nav__link">
-                  {'[ ]'} Our team
+                  <span className="header-nav__bracket">{'[ '}</span>
+                  <span className="header-nav__bracket">{'] '}</span>
+                  <span className="header-nav__text">Our team</span>
                 </a>
               </li>
             </ul>
@@ -106,7 +115,7 @@ export const Header = () => {
         }`}
         onClick={() => setVisible(true)}
       >
-        {'>'}
+        V
       </button>
     </>
   );
