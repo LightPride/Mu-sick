@@ -19,7 +19,10 @@ export const Footer = () => {
           <div className="footer-content__links">
             <ul className="footer-content__links-list">
               <li className="footer-content__links-item">
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/musick.project"
+                  target="blank"
+                >
                   <svg className="footer-content__links-icon">
                     <use
                       href={`${Icons}#instagram`}
@@ -31,7 +34,7 @@ export const Footer = () => {
               </li>
 
               <li className="footer-content__links-item">
-                <a href="#">
+                <a href="https://www.tiktok.com/@musick.project" target="blank">
                   <svg className="footer-content__links-icon">
                     <use
                       href={`${Icons}#tiktok`}
@@ -43,7 +46,10 @@ export const Footer = () => {
               </li>
 
               <li className="footer-content__links-item">
-                <a href="#">
+                <a
+                  href="https://open.spotify.com/playlist/4g4XawS5tTHpPTGFHkEEGY?si=ANYIXh9mROSLF9fB-cRwLg&pi=e-5M3ULAeYRNiP"
+                  target="blank"
+                >
                   <svg className="footer-content__links-icon">
                     <use
                       href={`${Icons}#spotify`}

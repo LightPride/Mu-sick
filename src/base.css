@@ -8,9 +8,6 @@
   --typography-black: rgb(25, 25, 25);
   --typography-grey: rgb(64, 65, 60);
   --system-default-40: rgb(182, 182, 182);
-  /* --desktop: 1440px; */
-  /* --tablet: 768px; */
-  /* --mobile: 480px; */
 }
 
 @font-face {
@@ -20,7 +17,8 @@
     url('../fonts/Nohemi-Regular.woff') format('woff');
   font-weight: 400;
 }
-pidar @font-face {
+
+@font-face {
   font-family: 'Nohemi';
   src:
     url('../fonts/Nohemi-Medium.woff2') format('woff2'),
@@ -97,15 +95,17 @@ button {
   padding: 0px 60px;
 
   @media screen and (min-width: 480px) {
-    width: 480px;
+    max-width: 480px;
     padding: 0px 15px;
   }
+
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
     padding: 0px 30px;
   }
+
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    max-width: 1440px;
     padding: 0px 60px;
   }
 }

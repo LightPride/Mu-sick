@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import Icons from '../../assets/svg/sprite.svg';
+import Typed from 'typed.js';
 import nmbarramundi from '../../assets/musicians/nmbarramundi.webp';
 import kristjan from '../../assets/musicians/kristjan.webp';
 import dyvour from '../../assets/musicians/dyvour.webp';
-import Icons from '../../assets/svg/sprite.svg';
-import Typed from 'typed.js';
+import coffinDodger from '../../assets/musicians/coffin-dodger.webp';
 import barramundiBg from '../../assets/backgrounds/bg-barramundi.webp';
 import devourBg from '../../assets/backgrounds/bg-devour.webp';
 import kristjanBg from '../../assets/backgrounds/bg-kristjan.webp';
@@ -42,7 +43,7 @@ const musicians = [
   },
   {
     name: 'Coffin-Dodger ✱',
-    image: null,
+    image: coffinDodger,
     link: `https://open.spotify.com/artist/5MOVd3pBi5wiI5K60vy6zR?si=N3dedGlRSBG9m5uQG1ovJQ`,
     text1: `Coming out of the gritty streets of Lasnamäe, Tallinn, Coffin Dodger is a shape-shifting force in the underground music scene. His journey isn’t the classic story of growing up in a musically driven household. In fact, music was barely a thing in his family, but sometimes it’s not about where you start - it’s about where you end up. Dodger’s path took him from acoustic guitar sessions in high school to the raw, experimental hip-hop beats. “I started writing songs ‘cause no one else would rap on them. Now, I don’t stop.”`,
     text2: `For five years, Coffin Dodger has been relentlessly dropping tracks that involve samples of nearly every genre, whether it’s folk, indie, hyperpop, or rap. There’s no box big enough to contain his sound. `,
@@ -164,8 +165,6 @@ export const OurMusicians = () => {
             ))}
           </div>
         </div>
-
-        <div className="copyright"></div>
       </div>
     </div>
   );

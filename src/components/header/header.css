@@ -1,6 +1,5 @@
 .header {
   position: fixed;
-
   width: 100%;
   min-height: 94px;
   padding: 30px 0 30px 0;
@@ -18,10 +17,11 @@
   top: -160px;
 }
 
-.header-wrapper {
+.header .container {
   display: flex;
   width: 1320px;
   height: 94px;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -30,11 +30,14 @@
   fill: var(--primary-white);
 }
 
-.header-nav__list {
+.nav-bar {
   display: flex;
-  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.header-nav__list {
   width: 158.5px;
-  margin-left: auto;
 }
 
 .header-nav__item {
@@ -44,9 +47,7 @@
 
 .header-nav__link {
   position: relative;
-
   padding-left: 15px;
-
   color: rgb(244, 245, 240);
   font-family: Nohemi;
   font-size: 14px;
@@ -58,7 +59,8 @@
   transition: 300ms;
 }
 
-.header-nav__link:hover:focus {
+.header-nav__link:hover,
+.header-nav__link:focus {
   color: rgb(208, 56, 10);
 }
 
@@ -119,9 +121,8 @@
 
 .header-social__list {
   display: flex;
-  flex-direction: row-reverse;
   gap: 12px;
-
+  justify-content: end;
   width: 158.5px;
   height: 24px;
 }
@@ -133,7 +134,8 @@
   transition: 300ms;
 }
 
-.header-social__icon:hover:focus {
+.header-social__icon:hover,
+.header-social__icon:focus {
   fill: var(--primary-orange);
 }
 
@@ -162,7 +164,7 @@
   z-index: 9;
 }
 
-.header-btn:hover:focus {
+.header-btn:hover {
   color: var(--primary-orange);
   border-color: var(--primary-orange);
 }

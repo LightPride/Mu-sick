@@ -1,5 +1,10 @@
-import placeholder from '../../assets/backgrounds/event-text-card.webp';
 import Icons from '../../assets/svg/sprite.svg';
+import vlad from '../../assets/team/vlad.webp';
+import iryna from '../../assets/team/iryna.webp';
+import ava from '../../assets/team/ava.webp';
+import andrii from '../../assets/team/andrii.webp';
+import taras from '../../assets/team/taras.webp';
+import bren from '../../assets/team/bren.webp';
 
 export const OurTeam = () => {
   return (
@@ -13,32 +18,58 @@ export const OurTeam = () => {
           </span>{' '}
           <br /> Behind This Project
         </h2>
+        {window.innerWidth >= 1440 ? (
+          <div className="our-team_list">
+            <div className="our-team_list-item">
+              <img src={iryna} alt="" className="our-team_list-image" />
+            </div>
 
-        <div className="our-team_list">
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
-          </div>
+            <div className="our-team_list-item">
+              <img src={andrii} alt="" className="our-team_list-image" />
+            </div>
 
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
-          </div>
+            <div className="our-team_list-item">
+              <img src={bren} alt="" className="our-team_list-image" />
+            </div>
 
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
-          </div>
+            <div className="our-team_list-item">
+              <img src={taras} alt="" className="our-team_list-image" />
+            </div>
 
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
-          </div>
+            <div className="our-team_list-item">
+              <img src={vlad} alt="" className="our-team_list-image" />
+            </div>
 
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
+            <div className="our-team_list-item">
+              <img src={ava} alt="" className="our-team_list-image" />
+            </div>
           </div>
-
-          <div className="our-team_list-item">
-            <img src={placeholder} alt="" className="our-team_list-image" />
-          </div>
-        </div>
+        ) : (
+          <>
+            <div className="our-team_list">
+              <div className="our-team_list-item">
+                <img src={iryna} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={andrii} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={bren} alt="" className="our-team_list-image" />
+              </div>
+            </div>
+            <div className="our-team_list">
+              <div className="our-team_list-item">
+                <img src={taras} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={vlad} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={ava} alt="" className="our-team_list-image" />
+              </div>
+            </div>
+          </>
+        )}
 
         <div className="our-team_info">
           <span className="navigation-label">{'[Our Team]'}</span>
@@ -67,7 +98,11 @@ export const OurTeam = () => {
 
             <div className="our-team_info-bottom-section">
               <div className="four-team_info-bottom-section-spacing">
-                <a href="" className="our-team_info-bottom-section_button">
+                <a
+                  href="https://www.instagram.com/musick.project"
+                  className="our-team_info-bottom-section_button"
+                  target="blank"
+                >
                   <svg className="our-team_info-bottom-section_link-svg">
                     <use
                       href={`${Icons}#instagram`}
@@ -77,7 +112,11 @@ export const OurTeam = () => {
                   </svg>
                 </a>
 
-                <a href="" className="our-team_info-bottom-section_button">
+                <a
+                  href="https://www.tiktok.com/@musick.project"
+                  className="our-team_info-bottom-section_button"
+                  target="blank"
+                >
                   <svg className="our-team_info-bottom-section_link-svg">
                     <use
                       href={`${Icons}#tiktok`}

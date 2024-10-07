@@ -62,13 +62,18 @@
   transition: 300ms;
 }
 
-.workWithUs-btn:hover {
+.workWithUs-btn:visited {
+  color: inherit;
+}
+
+.workWithUs-btn:hover .workWithUs-btn:focus {
   color: var(--primary-orange);
   border-color: var(--primary-orange);
   fill: var(--primary-orange);
 }
 
-.workWithUs-btn:hover svg {
+.workWithUs-btn:hover svg,
+.workWithUs-btn:focus svg {
   fill: var(--primary-orange);
 }
 

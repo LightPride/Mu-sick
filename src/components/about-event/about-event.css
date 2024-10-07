@@ -45,7 +45,7 @@
   background: url('../../assets/backgrounds/event-text-card.webp');
   background-size: contain;
   padding: 20px 65px 20px 20px;
-  max-width: 647px;
+  width: 647px;
   height: 395px;
   display: flex;
   flex-direction: column;

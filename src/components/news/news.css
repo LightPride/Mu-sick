@@ -43,7 +43,12 @@
   transition: 300ms;
 }
 
-.slider_card:hover {
+.slider_cardL:visited {
+  color: inherit;
+}
+
+.slider_card:hover,
+.slider_card:focus {
   border-color: var(--primary-orange);
 }
 

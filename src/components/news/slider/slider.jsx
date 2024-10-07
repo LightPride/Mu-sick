@@ -17,7 +17,7 @@ const newsData = [
   {
     name: 'instapost',
     image: instaPost,
-    link: `linktr.ee/musick.project`,
+    link: `https://linktr.ee/musick.project`,
     textHeader: `Check our Linktree`,
     text: `This ain’t your average music project. WE ARE MÜ-SICK and we’re here to mess things up in the best way possible. Our project is about bringing you the wildest, most experimental musicians doing shit their way. `,
   },
@@ -37,12 +37,38 @@ export const NewsSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToscroll: 1,
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <div className="slider-wrapper">
       <Slider {...settings}>
         {newsData.map((item) => (
-          <div key={item.name} className="slider_card">
+          <a
+            href={`${item.link}`}
+            target="blank"
+            key={item.name}
+            className="slider_card"
+          >
             <img src={item.image} className="slider_image" />
             <div className="slider_text-block">
               <div>
@@ -56,30 +82,9 @@ export const NewsSlider = () => {
             <svg className="news-logo">
               <use href={`${Icons}#news`} width="100%" height="100%"></use>
             </svg>
-          </div>
+          </a>
         ))}
       </Slider>
     </div>
   );
 };
-
-//    <div className="slider">
-//      <div id="slide-1" className="slider_card">
-//        <img src={placeholder} alt="First news image" className="slider_image" />
-//      </div>
-//      <div id="slide-2" className="slider_card">
-//        <img
-//          src={placeholder}
-//          alt="Second news image"
-//          className="slider_image"
-//        />
-//      </div>
-//      <div id="slide-3" className="slider_card">
-//        <img src={placeholder} alt="Third news image" className="slider_image" />
-//      </div>
-//    </div>
-//    <div className="slider-nav">
-//      <a href="#slide-1"></a>
-//      <a href="#slide-2"></a>
-//      <a href="#slide-3"></a>
-//    </div>

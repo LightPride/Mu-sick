@@ -21,52 +21,78 @@
 .our-team_list {
   margin-top: 60px;
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
 
-.our-team_list .our-team_list-item {
-  transition: 0.5s;
-  filter: saturate(0);
+@media screen and (min-width: 1440px) {
+  .our-team_list .our-team_list-item {
+    transition: 0.5s;
+    filter: saturate(0);
+  }
+
+  .our-team_list .our-team_list-item:hover {
+    filter: saturate(1);
+    transform: translateZ(200px);
+  }
+
+  .our-team_list .our-team_list-item:hover + * {
+    filter: saturate(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+  }
+
+  .our-team_list .our-team_list-item:hover + * + * {
+    filter: saturate(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+  }
+
+  .our-team_list .our-team_list-item:hover + * + * + * {
+    filter: saturate(0.2);
+    transform: translateZ(30px) rotateY(10deg);
+  }
+
+  .our-team_list .our-team_list-item:has(+ *:hover) {
+    filter: saturate(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+  }
+
+  .our-team_list .our-team_list-item:has(+ * + *:hover) {
+    filter: saturate(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+  }
+
+  .our-team_list .our-team_list-item:has(+ * + * + *:hover) {
+    filter: saturate(0.2);
+    transform: translateZ(30px) rotateY(-10deg);
+  }
 }
 
-.our-team_list .our-team_list-item:hover {
-  filter: saturate(1);
-  transform: translateZ(200px);
-}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .our-team_list .our-team_list-item {
+    transition: 0.5s;
+    filter: saturate(0);
+  }
 
-.our-team_list .our-team_list-item:hover + * {
-  filter: saturate(0.6);
-  transform: translateZ(150px) rotateY(40deg);
-}
+  .our-team_list .our-team_list-item:hover {
+    filter: saturate(1);
+    transform: translateZ(200px);
+  }
 
-.our-team_list .our-team_list-item:hover + * + * {
-  filter: saturate(0.4);
-  transform: translateZ(70px) rotateY(20deg);
-}
+  .our-team_list .our-team_list-item:hover + * {
+    filter: saturate(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+  }
 
-.our-team_list .our-team_list-item:hover + * + * + * {
-  filter: saturate(0.2);
-  transform: translateZ(30px) rotateY(10deg);
-}
-
-.our-team_list .our-team_list-item:has(+ *:hover) {
-  filter: saturate(0.6);
-  transform: translateZ(150px) rotateY(-40deg);
-}
-
-.our-team_list .our-team_list-item:has(+ * + *:hover) {
-  filter: saturate(0.4);
-  transform: translateZ(70px) rotateY(-20deg);
-}
-
-.our-team_list .our-team_list-item:has(+ * + * + *:hover) {
-  filter: saturate(0.2);
-  transform: translateZ(30px) rotateY(-10deg);
+  .our-team_list .our-team_list-item:has(+ *:hover) {
+    filter: saturate(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+  }
 }
 
 .our-team_list-image {
+  object-fit: cover;
   width: 210px;
   height: 320px;
 }

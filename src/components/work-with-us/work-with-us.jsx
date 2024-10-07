@@ -30,12 +30,16 @@ export const WorkWithUs = () => {
           </h2>
         </div>
 
-        <button className="workWithUs-btn">
+        <a
+          href="https://linktr.ee/musick.project"
+          target="blank"
+          className="workWithUs-btn"
+        >
           contact us
           <svg className="workWithUs-icon">
             <use href={`${Icons}#contact`} width="100%" height="100%"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </section>
   );
