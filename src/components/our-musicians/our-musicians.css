@@ -1,0 +1,139 @@
+.our-musicians {
+  position: relative;
+  padding-top: 140px;
+  overflow: hidden;
+}
+
+.our-musicians-spacing {
+  margin-top: 30px;
+  display: flex;
+  gap: 110px;
+  min-height: 700px;
+}
+
+.our-musicians_card {
+  display: flex;
+  gap: 25px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.our-musicians_card.fade-out {
+  opacity: 0;
+}
+
+.our-musicians_card.fade-in {
+  opacity: 1;
+}
+
+.our-musicians_card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.our-musicians_card-image {
+  object-fit: cover;
+  width: 315px;
+  height: 324px;
+}
+
+.our-musicians_card-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-musicians_card-info_name {
+  color: var(--primary-red);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.our-musicians_card-info_date {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.our-musicians_card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 20px 30px;
+  border: 2px solid var(--typography-white);
+  color: var(--typography-white);
+  fill: var(--typography-white);
+  transition: 300ms;
+}
+
+.our-musicians_card-button:visited {
+  color: inherit;
+}
+
+.our-musicians_card-button:hover {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  fill: var(--primary-orange);
+}
+
+.our-musicians_card-button-svg {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.our-musicians_card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.our-musicians_card-text {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100.52%;
+  text-align: left;
+}
+
+.our-musicians_names {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.our-musicians_name {
+  display: block;
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 62px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.our-musicians_name:hover,
+.our-musicians_name:focus {
+  color: var(--primary-orange);
+  transform: translateX(20px);
+}
+
+.our-musicians_name.active {
+  color: var(--primary-orange);
+  transform: translateX(20px);
+}

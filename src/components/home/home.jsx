@@ -1,5 +1,5 @@
-import musick from '../assets/styled-words/mu-sick.webp';
-import arrow from '../assets/arrow.webp';
+import musick from '../../assets/styled-words/mu-sick.webp';
+import arrow from '../../assets/arrow.webp';
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 

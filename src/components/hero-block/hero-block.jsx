@@ -1,4 +1,4 @@
-import underground from '../assets/styled-words/underground.webp';
+import underground from '../../assets/styled-words/underground.webp';
 
 export const Hero = () => {
   return (

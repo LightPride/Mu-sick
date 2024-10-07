@@ -1,5 +1,5 @@
-import placeholder from '../assets/backgrounds/event-text-card.webp';
-import Icons from '../assets/svg/sprite.svg';
+import placeholder from '../../assets/backgrounds/event-text-card.webp';
+import Icons from '../../assets/svg/sprite.svg';
 
 export const OurTeam = () => {
   return (

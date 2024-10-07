@@ -1,4 +1,5 @@
-import Icons from '../assets/svg/sprite.svg';
+import Icons from '../../assets/svg/sprite.svg';
+// import './footer.css';
 
 export const Footer = () => {
   return (

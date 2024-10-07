@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Icons from '../assets/svg/sprite.svg';
+import Icons from '../../assets/svg/sprite.svg';
 import Typed from 'typed.js';
 
 export const WorkWithUs = () => {

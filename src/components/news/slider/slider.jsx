@@ -1,10 +1,10 @@
-import placeholder from '../assets/backgrounds/event-text-card.webp';
-import spotifyPost from '../assets/backgrounds/spotify-post.webp';
-import instaPost from '../assets/backgrounds/instapost.webp';
+import placeholder from '../../../assets/backgrounds/event-text-card.webp';
+import spotifyPost from '../../../assets/backgrounds/spotify-post.webp';
+import instaPost from '../../../assets/backgrounds/instapost.webp';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import Icons from '../assets/svg/sprite.svg';
+import Icons from '../../../assets/svg/sprite.svg';
 
 const newsData = [
   {

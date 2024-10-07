@@ -1,13 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import Icons from '../assets/svg/sprite.svg';
+import Icons from '../../assets/svg/sprite.svg';
 
 export const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [visible, setVisible] = useState(true);
 
   const handleScroll = useCallback(() => {
-    const currentScrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const currentScrollPosition = document.documentElement.scrollTop;
 
     if (currentScrollPosition > scrollPosition) {
       setVisible(false);

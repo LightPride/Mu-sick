@@ -1,4 +1,4 @@
-import welcomeToTheChaos from '../assets/styled-words/welcome-to-the-chaos.webp';
+import welcomeToTheChaos from '../../assets/styled-words/welcome-to-the-chaos.webp';
 
 export const AboutEvent = () => {
   return (

@@ -10,17 +10,19 @@ import { Footer } from './components/footer';
 
 function App() {
   return (
-    <main>
+    <>
       <Header />
-      <Home />
-      <AboutEvent />
-      <Hero />
-      <OurMusicians />
-      <WorkWithUs />
-      <News />
-      <OurTeam />
+      <main>
+        <Home />
+        <AboutEvent />
+        <Hero />
+        <OurMusicians />
+        <WorkWithUs />
+        <News />
+        <OurTeam />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 export default App;

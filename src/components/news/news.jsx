@@ -1,5 +1,5 @@
 // import placeholder from '../assets/backgrounds/event-text-card.webp';
-import { NewsSlider } from './slider';
+import { NewsSlider } from './slider/slider';
 export const News = () => {
   return (
     <div className="news">
