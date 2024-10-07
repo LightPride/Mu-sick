@@ -45,7 +45,7 @@
   background: url('../../assets/backgrounds/event-text-card.webp');
   background-size: contain;
   padding: 20px 65px 20px 20px;
-  width: 647px;
+  max-width: 647px;
   height: 395px;
   display: flex;
   flex-direction: column;
@@ -110,14 +110,14 @@
   justify-content: space-between;
   background-color: var(--primary-white);
   padding: 20px 20px;
-  width: 319px;
+  max-width: 319px;
   height: 395px;
 }
 
 .event-register-form-container {
   margin-top: 20px;
   padding: 20px 20px;
-  width: 985px;
+  max-width: 985px;
   height: 383px;
   border: 2px solid var(--primary-white);
 }

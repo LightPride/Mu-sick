@@ -163,3 +163,17 @@
   letter-spacing: 0%;
   text-align: left;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .our-team_info {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .our-team_info-upper-section,
+  .our-team_info-bottom-section,
+  .our-team_info-section_text-list {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

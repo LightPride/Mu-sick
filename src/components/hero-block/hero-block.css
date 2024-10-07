@@ -24,3 +24,10 @@
   width: 904px;
   height: 176px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .hero_image {
+    width: 452px;
+    height: 88px;
+  }
+}
