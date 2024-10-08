@@ -15,17 +15,18 @@
   max-width: 880px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .home_cta-text {
   display: block;
-  height: 70px;
+  height: 132px;
   color: var(--typography-white);
   font-family: Nohemi;
   font-size: 36px;
   font-weight: 600;
-  line-height: 93%;
-  text-align: left;
+  line-height: 33.48px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -34,7 +35,7 @@
   text-align: center;
   cursor: pointer;
   background-color: inherit;
-  margin-top: 30px;
+  margin-top: 64px;
   padding: 20px 30px;
   color: var(--typography-white);
   border-color: var(--typography-white);
@@ -44,7 +45,6 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 93%;
-
   transition: 300ms;
 }
 
@@ -53,46 +53,71 @@
 }
 
 .home_middle-block {
-  margin-top: 90px;
-  display: flex;
-  gap: 125px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'text1'
+    'jopa'
+    'image';
+  gap: 20px;
 }
 
 .home_middle-block-image {
-  width: 880px;
-  height: 417px;
+  grid-area: image;
+  width: 100%;
 }
 
-.home_middle-block-text-wrapper {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 100.52%;
-  font-family: Nohemi;
-  color: var(--typography-white);
-  margin-top: 40px;
+.home_middle-block-text1 {
+  grid-area: text1;
+  max-width: 315px;
+  line-height: 21.6px;
+  font-size: 18px;
 }
 
-.home_middle-block-text1,
+.jopa {
+  grid-area: jopa;
+  display: flex;
+  justify-content: space-between;
+}
+
 .home_middle-block-text2 {
-  width: 315px;
-  display: block;
-  margin-top: 40px;
+  max-width: 315px;
+  line-height: 21.6px;
+  font-size: 18px;
 }
 
 .home_middle-block-arrow {
-  margin-top: 40px;
+  width: 38px;
+  height: 70px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .home_middle-block {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: column;
-    gap: 125px;
+  .home_middle-block-text1 {
+    grid-area: text1;
+    max-width: 100%;
+    line-height: 21.6px;
+    font-size: 18px;
   }
+}
 
-  .home_middle-block-image {
-    width: 440px;
-    height: 209px;
+@media screen and (min-width: 1440px) {
+  .home_middle-block {
+    grid-template-areas:
+      'image text1'
+      'image jopa';
+    align-items: stretch;
+    grid-column-gap: 125px;
+  }
+  .jopa {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home_middle-block-text1,
+  .home_middle-block-text2 {
+    max-width: 364px;
+  }
+  .home_cta-button {
+    margin-top: 30px;
   }
 }

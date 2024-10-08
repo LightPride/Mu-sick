@@ -8,7 +8,7 @@ export const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'This isn’t just music it’s a fucking<br/>revolution. Are you ready?',
+        'This isn’t just music; It’s a fucking<br/>revolution. Are you ready?',
       ],
       typeSpeed: 30,
       loop: true,
@@ -33,13 +33,13 @@ export const Home = () => {
         </div>
         <div className="home_middle-block">
           <img className="home_middle-block-image" src={musick} alt="mu-sick" />
-          <div className="home_middle-block-text-wrapper">
-            <span className="home_middle-block-text1">
-              Welcome to the community where your music taste won’t make you an
-              outsider. This is a space for musicians who dare to be different
-              and for listeners who crave something real. If you’re sick of the
-              same old radio-appropriate beats, you’re in the right place.
-            </span>
+          <span className="home_middle-block-text1">
+            Welcome to the community where your music taste won’t make you an
+            outsider. This is a space for musicians who dare to be different and
+            for listeners who crave something real. If you’re sick of the same
+            old radio-appropriate beats, you’re in the right place.
+          </span>
+          <div className="jopa">
             <span className="home_middle-block-text2">
               We’re bringing the experimental stuff. The alternative stuff. The
               underground stuff.
