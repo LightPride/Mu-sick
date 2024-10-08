@@ -1,6 +1,6 @@
 export const EventComponent = () => {
   return (
-    <div className="container-event-spacing">
+    <section className="container section">
       <span id="pre-register" className="navigation-label">
         [event]
       </span>
@@ -84,6 +84,6 @@ export const EventComponent = () => {
           Pre-Register
         </button>
       </div>
-    </div>
+    </section>
   );
 };
