@@ -8,7 +8,7 @@ export const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'This isn’t just music; It’s a fucking<br/>revolution. Are you ready?',
+        'This isn’t just music It’s a fucking<br/>revolution. Are you ready?',
       ],
       typeSpeed: 30,
       loop: true,

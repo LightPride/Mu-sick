@@ -21,9 +21,8 @@ export const WorkWithUs = () => {
   return (
     <section className="workWithUs">
       <div className="container">
+        <span className="navigation-label">{'[work with us]'}</span>
         <div className="workWithUs-titles__wrapper">
-          <h3 className="navigation-label">{'[work with us]'}</h3>
-
           <h2 className="workWithUs-title">
             <span className="workWithUs-title__span">got {'[beats]'}?</span>
             <span ref={el} />
