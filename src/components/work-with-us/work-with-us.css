@@ -1,14 +1,9 @@
 .workWithUs {
   display: flex;
-
-  max-width: 1440px;
   height: 634px;
   margin: 0 auto;
-  padding: 52px 0 80px 0;
-}
-
-.workWithUs .container {
-  display: flex;
+  padding-top: 52px;
+  padding-bottom: 80px;
 }
 
 .workWithUs-titles__wrapper {
@@ -66,10 +61,10 @@
   color: inherit;
 }
 
-.workWithUs-btn:hover .workWithUs-btn:focus {
+.workWithUs-btn:hover,
+.workWithUs-btn:focus {
   color: var(--primary-orange);
   border-color: var(--primary-orange);
-  fill: var(--primary-orange);
 }
 
 .workWithUs-btn:hover svg,
@@ -84,4 +79,16 @@
   margin-left: 10px;
   fill: var(--primary-white);
   transition: 150ms;
+}
+
+@media screen and (max-width: 1439px) {
+  .workWithUs {
+    flex-direction: column;
+  }
+
+  .workWithUs-titles__wrapper {
+    justify-content: start;
+    width: 100%;
+    margin-top: 20px;
+  }
 }

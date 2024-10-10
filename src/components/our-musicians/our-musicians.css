@@ -139,3 +139,19 @@
   color: var(--primary-orange);
   transform: translateX(20px);
 }
+
+@media screen and (max-width: 1439px) {
+  .our-musicians {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .our-musicians-spacing {
+    flex-direction: column-reverse;
+  }
+
+  .our-musicians_name {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

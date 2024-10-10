@@ -19,27 +19,25 @@ export const WorkWithUs = () => {
   }, []);
 
   return (
-    <section className="workWithUs">
-      <div className="container">
-        <span className="navigation-label">{'[work with us]'}</span>
-        <div className="workWithUs-titles__wrapper">
-          <h2 className="workWithUs-title">
-            <span className="workWithUs-title__span">got {'[beats]'}?</span>
-            <span ref={el} />
-          </h2>
-        </div>
-
-        <a
-          href="https://linktr.ee/musick.project"
-          target="blank"
-          className="workWithUs-btn"
-        >
-          contact us
-          <svg className="workWithUs-icon">
-            <use href={`${Icons}#contact`} width="100%" height="100%"></use>
-          </svg>
-        </a>
+    <section className="workWithUs container">
+      <span className="navigation-label">{'[work with us]'}</span>
+      <div className="workWithUs-titles__wrapper">
+        <h2 className="workWithUs-title">
+          <span className="workWithUs-title__span">got {'[beats]'}?</span>
+          <span ref={el} />
+        </h2>
       </div>
+
+      <a
+        href="https://linktr.ee/musick.project"
+        target="blank"
+        className="workWithUs-btn"
+      >
+        contact us
+        <svg className="workWithUs-icon">
+          <use href={`${Icons}#contact`} width="100%" height="100%"></use>
+        </svg>
+      </a>
     </section>
   );
 };

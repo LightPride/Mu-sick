@@ -89,7 +89,7 @@ export const OurMusicians = () => {
   }, [selectedMusician]);
 
   return (
-    <div className="our-musicians">
+    <section className="our-musicians">
       <div className="container">
         <span className="navigation-label">
           {'[The faces of the underground]'}
@@ -166,6 +166,6 @@ export const OurMusicians = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
