@@ -11,11 +11,23 @@
   min-height: 700px;
 }
 
-.our-musicians_card {
-  display: flex;
-  gap: 25px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+@media screen and (max-width: 767px) {
+  .our-musicians_card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-musicians_card {
+    display: flex;
+    gap: 25px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
 }
 
 .our-musicians_card.fade-out {
@@ -39,10 +51,20 @@
   z-index: -1;
 }
 
-.our-musicians_card-image {
-  object-fit: cover;
-  width: 315px;
-  height: 324px;
+@media screen and (max-width: 767px) {
+  .our-musicians_card-image {
+    object-fit: cover;
+    max-width: 448px;
+    height: 546px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-musicians_card-image {
+    object-fit: cover;
+    width: 315px;
+    height: 324px;
+  }
 }
 
 .our-musicians_card-info {
@@ -79,6 +101,8 @@
   color: var(--typography-white);
   fill: var(--typography-white);
   transition: 300ms;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .our-musicians_card-button:visited {
@@ -87,8 +111,9 @@
 
 .our-musicians_card-button:hover {
   border-color: var(--primary-orange);
-  color: var(--primary-orange);
-  fill: var(--primary-orange);
+  color: var(--typography-white);
+  background-color: var(--primary-orange);
+  fill: var(--typography-white);
 }
 
 .our-musicians_card-button-svg {
@@ -112,10 +137,19 @@
   text-align: left;
 }
 
-.our-musicians_names {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+@media screen and (max-width: 767px) {
+  .our-musicians_names {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-musicians_names {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .our-musicians_name {

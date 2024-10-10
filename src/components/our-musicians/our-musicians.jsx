@@ -12,7 +12,8 @@ import coffinDodgerBg from '../../assets/backgrounds/bg-coffin-dodger.webp';
 
 const musicians = [
   {
-    name: 'NM ✱ Barramundi',
+    name: 'NM Barramundi',
+    nameStar: 'NM ✱ Barramundi',
     image: nmbarramundi,
     link: `https://open.spotify.com/artist/1Ki9n7WV9D8rwLQoWUgdjS?si=AZ-Ui8-eTru2PsYfBEMzPA`,
     text1: `Growing up in the quiet village of Kurna, Estonia, NM Barramundi always knew isolation and managed to turn it into an art form. Despite being a straight-A student with a million hobbies, he felt distant, longing for a neighbor’s kid to hang with. That restlessness brewed a creative fire, one that first took shape in rap.`,
@@ -22,7 +23,8 @@ const musicians = [
     bg: 0,
   },
   {
-    name: 'Dyvour ✱',
+    name: 'Dyvour',
+    nameStar: 'Dyvour ✱',
     image: dyvour,
     link: `https://open.spotify.com/artist/4s8QBLbKQfVyxBBFKici0O?si=swYiWnOAT4aUf8d_GBo1Xw`,
     text1: `Dyvour's music is a reflection of the contrasts in his life: isolation mixed with the chaos of internet culture. Growing up far from the hustle and bustle of the city allowed him the space to dive deep into online music. “Internet culture is a large part of how I found more and more weird and interesting music that expanded my taste and interest in the art form."`,
@@ -32,7 +34,8 @@ const musicians = [
     bg: 1,
   },
   {
-    name: 'Kristjan ✱ Glück',
+    name: 'Kristjan Glück',
+    nameStar: 'Kristjan ✱ Glück',
     image: kristjan,
     link: `https://open.spotify.com/artist/4wlGofpoCx983N0ts4JOMi?si=0Emh9umAT-mw_q44PshLRw`,
     text1: `Kristjan Glück is a self-taught experimental musician who's never content to stick with one style, but rather constantly evolving, exploring complex issues in his songs and staying unapologetically true to himself. His last three albums (trilogy) are a great way to understand his growth and journey both as a musician and as a person.`,
@@ -42,7 +45,8 @@ const musicians = [
     bg: 2,
   },
   {
-    name: 'Coffin-Dodger ✱',
+    name: 'Coffin-Dodger',
+    nameStar: 'Coffin-Dodger ✱',
     image: coffinDodger,
     link: `https://open.spotify.com/artist/5MOVd3pBi5wiI5K60vy6zR?si=N3dedGlRSBG9m5uQG1ovJQ`,
     text1: `Coming out of the gritty streets of Lasnamäe, Tallinn, Coffin Dodger is a shape-shifting force in the underground music scene. His journey isn’t the classic story of growing up in a musically driven household. In fact, music was barely a thing in his family, but sometimes it’s not about where you start - it’s about where you end up. Dodger’s path took him from acoustic guitar sessions in high school to the raw, experimental hip-hop beats. “I started writing songs ‘cause no one else would rap on them. Now, I don’t stop.”`,
@@ -75,7 +79,7 @@ export const OurMusicians = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [`${selectedMusician.name}`],
+      strings: [`${selectedMusician.nameStar}`],
       typeSpeed: 40,
       loop: true,
       backDelay: 4000,

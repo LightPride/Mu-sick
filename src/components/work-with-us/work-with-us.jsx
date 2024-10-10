@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Icons from '../../assets/svg/sprite.svg';
 import Typed from 'typed.js';
+import rotatingShape from '../../assets/shapes/rotating-shape.png';
 
 export const WorkWithUs = () => {
   const el = useRef(null);
@@ -20,6 +21,7 @@ export const WorkWithUs = () => {
 
   return (
     <section className="workWithUs container">
+      <img src={rotatingShape} className="auto-rotate"></img>
       <span className="navigation-label">{'[work with us]'}</span>
       <div className="workWithUs-titles__wrapper">
         <h2 className="workWithUs-title">

@@ -1,11 +1,54 @@
 .workWithUs {
   display: flex;
-  height: 634px;
+  height: 800px;
   margin: 0 auto;
   padding-top: 52px;
   padding-bottom: 80px;
+  position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .auto-rotate {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auto-rotate {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+}
+
+/* .chains {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  width: 300px;
+  height: 300px;
+} */
+
+@keyframes autoRotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .workWithUs-titles__wrapper {
   display: flex;
   justify-content: center;
@@ -63,13 +106,14 @@
 
 .workWithUs-btn:hover,
 .workWithUs-btn:focus {
-  color: var(--primary-orange);
+  background-color: var(--primary-orange);
+  color: var(--typography-white);
   border-color: var(--primary-orange);
 }
 
 .workWithUs-btn:hover svg,
 .workWithUs-btn:focus svg {
-  fill: var(--primary-orange);
+  fill: var(--typography-white);
 }
 
 .workWithUs-icon {
