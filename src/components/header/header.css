@@ -184,7 +184,8 @@
   opacity: 1;
 }
 
-.header-btn__icon {
+.header-btn__icon,
+.header-btn__mobile_wrapper {
   display: none;
 }
 
@@ -254,6 +255,10 @@
     height: 73px;
 
     fill: var(--primary-orange);
+  }
+
+  .header-btn__mobile_wrapper {
+    display: block;
   }
 
   .header-logo__mobile {
