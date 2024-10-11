@@ -137,7 +137,7 @@
 
 .header-social__icon:hover,
 .header-social__icon:focus {
-  fill: var(--primary-orange);
+  fill: var(--primary-red);
 }
 
 .header-social__span {
@@ -170,8 +170,8 @@
 }
 
 .header-btn:hover {
-  color: var(--primary-orange);
-  border-color: var(--primary-orange);
+  color: var(--primary-red);
+  border-color: var(--primary-red);
 }
 
 .header-btn__hidden {

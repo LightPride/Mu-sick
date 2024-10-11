@@ -8,22 +8,43 @@ import { OurTeam } from './components/our-team';
 import { News } from './components/news';
 import { Footer } from './components/footer';
 import { EventComponent } from './components/event/event';
+import { useEffect, useState } from 'react';
+import { Loader } from './components/loader';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      const content = document.querySelector('.content-container');
+      content.classList.add('show');
+    }
+  }, [isLoading]);
   return (
     <>
-      <Header />
-      <main>
-        <Home />
-        <About />
-        <EventComponent />
-        <Hero />
-        <OurMusicians />
-        <WorkWithUs />
-        <News />
-        <OurTeam />
-      </main>
-      <Footer />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className="content-container">
+          <Header />
+          <main>
+            <Home />
+            <About />
+            <EventComponent />
+            <Hero />
+            <OurMusicians />
+            <WorkWithUs />
+            <News />
+            <OurTeam />
+          </main>
+          <Footer />
+        </div>
+      )}
     </>
   );
 }

@@ -16,7 +16,7 @@ export const EventComponent = () => {
               <span className="event-cards_date-card_date">Date:</span>
 
               <span className="event-cards_date-card_date-text">
-                27✱09✱2024
+                16✱11✱2024
               </span>
             </div>
 
@@ -24,7 +24,7 @@ export const EventComponent = () => {
               <span className="event-cards_date-card_place">Place:</span>
 
               <span className="event-cards_date-card_place-text">
-                Viru väljak 4, 10111 Tallinn, Eesti
+                Ükskõik Baar/Pikk tn 35, 10133 Tallinn
               </span>
             </div>
           </div>

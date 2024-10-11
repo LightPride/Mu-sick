@@ -185,8 +185,8 @@
 }
 
 .our-team_info__title-section_button:hover {
-  background-color: var(--primary-orange);
-  border-color: var(--primary-orange);
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
   fill: var(--typography-white);
 }
 

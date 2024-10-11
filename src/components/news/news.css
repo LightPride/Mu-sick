@@ -49,7 +49,7 @@
 
 .slider_card:hover,
 .slider_card:focus {
-  border-color: var(--primary-orange);
+  border-color: var(--primary-red);
 }
 
 .slider_image {

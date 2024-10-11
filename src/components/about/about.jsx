@@ -7,7 +7,11 @@ export const About = () => {
         {'[about]'}
       </span>
       <div className="about-block-text">
-        <img className="about_image" src={welcomeToTheChaos} alt="welcome" />
+        <img
+          className="autoShow about_image autoShowByScroll"
+          src={welcomeToTheChaos}
+          alt="welcome"
+        />
         <span className="about_text1">
           We know how long you’ve been craving authenticity, and we are here to
           bring raw, experimental beats straight to your ears. We’re not just

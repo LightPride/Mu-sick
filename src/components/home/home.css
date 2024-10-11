@@ -48,9 +48,10 @@
   transition: 300ms;
 }
 
-.home_cta-button:hover {
-  background-color: rgba(244, 245, 240, 0.7);
-  color: var(--typography-black);
+.home_cta-button:hover,
+.home_cta-button:focus {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
 }
 
 .home_middle-block {
@@ -123,5 +124,6 @@
   }
   .home_cta-button {
     margin-top: 30px;
+    padding: 40px 40px;
   }
 }

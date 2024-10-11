@@ -32,7 +32,11 @@ export const Home = () => {
           </a>
         </div>
         <div className="home_middle-block">
-          <img className="home_middle-block-image" src={musick} alt="mu-sick" />
+          <img
+            className="autoShow home_middle-block-image"
+            src={musick}
+            alt="mu-sick"
+          />
           <span className="home_middle-block-text1">
             Welcome to the community where your music taste won’t make you an
             outsider. This is a space for musicians who dare to be different and

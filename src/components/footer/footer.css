@@ -83,8 +83,9 @@
   transition: 300ms;
 }
 
-.footer-content__links-icon:hover {
-  fill: var(--primary-orange);
+.footer-content__links-icon:hover,
+.footer-content__links-icon:focus {
+  fill: var(--primary-red);
 }
 
 .footer-content__links-date {

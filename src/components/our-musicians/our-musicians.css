@@ -129,9 +129,9 @@
 }
 
 .our-musicians_card-button:hover {
-  border-color: var(--primary-orange);
+  border-color: var(--primary-red);
   color: var(--typography-white);
-  background-color: var(--primary-orange);
+  background-color: var(--primary-red);
   fill: var(--typography-white);
 }
 
@@ -187,12 +187,12 @@
 
 .our-musicians_name:hover,
 .our-musicians_name:focus {
-  color: var(--primary-orange);
+  color: var(--primary-red);
   transform: translateX(20px);
 }
 
 .our-musicians_name.active {
-  color: var(--primary-orange);
+  color: var(--primary-red);
   transform: translateX(20px);
 }
 
