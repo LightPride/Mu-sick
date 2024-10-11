@@ -90,6 +90,10 @@ button {
   cursor: pointer;
 }
 
+.noscroll {
+  overflow-y: hidden;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
