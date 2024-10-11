@@ -224,15 +224,20 @@ button {
   }
 }
 
-.content-container {
-  opacity: 0;
-  filter: blur(10px);
-  transition:
-    opacity 1s ease-out,
-    filter 1s ease-out;
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+  animation: SiteStartFilter 4s ease-in;
 }
 
-.content-container.show {
-  opacity: 1;
-  filter: blur(0);
+@keyframes SiteStartFilter {
+  75% {
+    backdrop-filter: blur(3px);
+  }
+  100% {
+    backdrop-filter: blur(0);
+  }
 }

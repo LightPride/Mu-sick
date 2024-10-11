@@ -10,7 +10,7 @@ const navItems = [
 ];
 
 export const Header = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const viewport = window.innerWidth;
 
@@ -19,6 +19,12 @@ export const Header = () => {
 
     if (viewport > 767 && currentScrollPosition > 0) {
       setVisible(false);
+    }
+  }, [viewport]);
+
+  useEffect(() => {
+    if (viewport > 767) {
+      setVisible(true);
     }
   }, [viewport]);
 

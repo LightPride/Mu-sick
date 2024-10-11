@@ -19,32 +19,22 @@ function App() {
     }, 3000);
   }, []);
 
-  useEffect(() => {
-    if (!isLoading) {
-      const content = document.querySelector('.content-container');
-      content.classList.add('show');
-    }
-  }, [isLoading]);
   return (
     <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <div className="content-container">
-          <Header />
-          <main>
-            <Home />
-            <About />
-            <EventComponent />
-            <Hero />
-            <OurMusicians />
-            <WorkWithUs />
-            <News />
-            <OurTeam />
-          </main>
-          <Footer />
-        </div>
-      )}
+      {isLoading && <Loader />}
+      <div className="backdrop" />
+      <Header />
+      <main>
+        <Home />
+        <About />
+        <EventComponent />
+        <Hero />
+        <OurMusicians />
+        <WorkWithUs />
+        <News />
+        <OurTeam />
+      </main>
+      <Footer />
     </>
   );
 }

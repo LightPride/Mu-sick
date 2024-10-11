@@ -179,7 +179,7 @@
   opacity: 0;
 }
 
-.header-btn__wisible {
+.header-btn__visible {
   pointer-events: all;
   opacity: 1;
 }
