@@ -103,7 +103,7 @@ export const OurMusicians = () => {
           <div
             className={`our-musicians_card ${fade ? 'fade-out' : 'fade-in'}`}
           >
-            <div>
+            <div className="our-musicians_card-container">
               <img
                 className="our-musicians_card-image"
                 src={selectedMusician.image}
@@ -127,6 +127,7 @@ export const OurMusicians = () => {
                   ></use>
                 </svg>
               </a>
+              <span className="navigation-label">{'[OUR MUSICIANS]'}</span>
             </div>
 
             <div className="our-musicians_card-text-container">

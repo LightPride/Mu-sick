@@ -37,6 +37,7 @@ export const NewsSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToscroll: 1,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1439,
@@ -44,6 +45,7 @@ export const NewsSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          arrows: false,
           dots: true,
         },
       },
@@ -54,6 +56,7 @@ export const NewsSlider = () => {
           slidesToScroll: 1,
           initialSlide: 1,
           infinite: true,
+          arrows: false,
           dots: true,
         },
       },
