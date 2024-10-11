@@ -168,8 +168,11 @@
     display: flex;
     gap: 25px;
     overflow-x: scroll;
-    scrollbar-width: thin;
-    -ms-overflow-style: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .our-musicians_names::-webkit-scrollbar {
+    display: none;
   }
   .our-musicians_name:nth-child(1) {
     min-width: 275px;
