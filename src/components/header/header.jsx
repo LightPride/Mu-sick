@@ -51,11 +51,11 @@ export const Header = () => {
             </svg>
           </button>
 
-          <a>
+          <div>
             <svg className="header-logo">
               <use href={`${Icons}#logo`} width="100%" height="100%"></use>
             </svg>
-          </a>
+          </div>
 
           <nav className="nav-bar">
             <ul className="header-nav__list">
@@ -114,6 +114,16 @@ export const Header = () => {
           </div>
         </div>
       </header>
+
+      <div className="header-btn__mobile_wrapper">
+        <svg
+          className={`header-logo__mobile ${
+            visible ? 'header-btn__hidden' : 'header-btn__visible'
+          }`}
+        >
+          <use href={`${Icons}#logo`} width="100%" height="100%"></use>
+        </svg>
+      </div>
 
       <button
         className={`header-btn ${

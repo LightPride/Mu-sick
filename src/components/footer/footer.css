@@ -114,8 +114,8 @@
   .footer-title {
     height: 371px;
 
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 126.48px;
+    line-height: 127.13px;
   }
 
   .footer-title__span {
@@ -163,5 +163,19 @@
 
     font-size: 24px;
     line-height: 24.12px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .footer-title {
+    height: 371px;
+
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .footer-title__span {
+    font-size: 22px;
+    line-height: 22px;
   }
 }

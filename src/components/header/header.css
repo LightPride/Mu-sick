@@ -28,6 +28,7 @@
 }
 
 .header-logo {
+  position: static;
   width: 90px;
   height: 87px;
   fill: var(--primary-white);
@@ -201,11 +202,20 @@
     backdrop-filter: none;
   }
 
+  .header__visible {
+    top: 0;
+    right: 0;
+  }
+
+  .header__hidden {
+    top: 0;
+    right: -100%;
+  }
+
   .header .container {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    overflow-y: scroll;
   }
 
   .header-exit_btn {
@@ -217,10 +227,11 @@
     justify-content: center;
     align-items: center;
 
-    width: 42px;
-    height: 42px;
+    width: 56px;
+    height: 56px;
     padding: 0;
-    background-color: inherit;
+    background-color: black;
+    border-radius: 100%;
     border: none;
 
     transition: 300ms;
@@ -228,8 +239,8 @@
   }
 
   .header-exit_btn__icon {
-    width: 100%;
-    height: 100%;
+    width: 42px;
+    height: 42px;
     fill: var(--primary-white);
   }
 
@@ -239,24 +250,41 @@
   }
 
   .header-logo {
+    width: 75px;
+    height: 73px;
+
     fill: var(--primary-orange);
   }
 
+  .header-logo__mobile {
+    position: fixed;
+    top: 30px;
+    left: 16px;
+
+    width: 75px;
+    height: 73px;
+
+    fill: var(--primary-white);
+
+    transition: 300ms;
+    z-index: 9;
+  }
+
   .nav-bar {
-    margin: 100px 0 0 0;
+    margin: 30px 0 0 0;
   }
 
   .header-nav__list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     width: 100%;
   }
 
   .header-nav__link {
     padding: 0;
     color: var(--typography-grey);
-    font-size: 48px;
+    font-size: 32px;
     line-height: 48.25px;
   }
 
@@ -269,7 +297,7 @@
     justify-content: start;
     gap: 20px;
     width: 100%;
-    margin-top: 200px;
+    margin-top: auto;
     padding-top: 20px;
     border-top: 2px solid var(--typography-grey);
   }
@@ -283,7 +311,6 @@
   .header-social__span {
     display: block;
     width: 100%;
-    margin-top: 30px;
 
     color: var(--typography-grey);
     font-family: Nohemi;
