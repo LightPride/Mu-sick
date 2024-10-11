@@ -6,7 +6,7 @@ export const EventComponent = () => {
       </h3>
 
       <div className="event-block">
-        <div className="event-cards_date-card">
+        <div className="autoBlur2 event-cards_date-card">
           <span className="event-cards_date-card_slogan">
             Be part of the <br /> experiment - see <br /> our musicians live!
           </span>
@@ -30,7 +30,7 @@ export const EventComponent = () => {
           </div>
         </div>
 
-        <div className="event-cards_info-card">
+        <div className="autoBlur2 event-cards_info-card">
           <h2 className="event-cards_info-card_header">
             About <br /> Event
           </h2>
@@ -51,7 +51,7 @@ export const EventComponent = () => {
             console.log(evt);
           }}
           id="pre-register"
-          className="event-register-form"
+          className="autoBlur2 event-register-form"
         >
           <div className="event-register-form_container">
             <h2 className="event-register-form_header">

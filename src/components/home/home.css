@@ -1,5 +1,5 @@
 .home {
-  padding-top: 210px;
+  padding-top: 170px;
   padding-bottom: 30px;
   min-height: 100vh;
   position: relative;
@@ -60,7 +60,7 @@
   grid-template-rows: auto;
   grid-template-areas:
     'text1'
-    'jopa'
+    'text2'
     'image';
   gap: 20px;
 }
@@ -77,8 +77,8 @@
   font-size: 18px;
 }
 
-.jopa {
-  grid-area: jopa;
+.text2 {
+  grid-area: text2;
   display: flex;
   justify-content: space-between;
 }
@@ -107,11 +107,11 @@
   .home_middle-block {
     grid-template-areas:
       'image text1'
-      'image jopa';
+      'image text2';
     align-items: stretch;
     grid-column-gap: 125px;
   }
-  .jopa {
+  .text2 {
     flex-direction: column;
     gap: 20px;
   }

@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <section className="footer container">
       <div className="footer-title__wrapper">
-        <h2 className="footer-title">
+        <h2 className=" transitionLeft footer-title">
           <span className="footer-title__span">©</span>MÜ-SICK
         </h2>
       </div>

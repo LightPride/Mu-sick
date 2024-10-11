@@ -24,7 +24,7 @@ export const WorkWithUs = () => {
       <img src={rotatingShape} className="auto-rotate"></img>
       <span className="navigation-label">{'[work with us]'}</span>
       <div className="workWithUs-titles__wrapper">
-        <h2 className="workWithUs-title">
+        <h2 className="transitionLeft workWithUs-title">
           <span className="workWithUs-title__span">got {'[beats]'}?</span>
           <span ref={el} />
         </h2>

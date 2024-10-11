@@ -12,13 +12,13 @@ export const About = () => {
           src={welcomeToTheChaos}
           alt="welcome"
         />
-        <span className="about_text1">
+        <span className="autoBlur about_text1">
           We know how long you’ve been craving authenticity, and we are here to
           bring raw, experimental beats straight to your ears. We’re not just
           another music project; we’re a goddamn revolution in the underground
           music scene.
         </span>
-        <span className="about_text2">
+        <span className="autoBlur about_text2">
           We are a complex multi-platform project, and right now you are
           exploring one of our platforms. Our Instagram and TikTok should be
           next on your list, followed by our documentary that’s coming out very

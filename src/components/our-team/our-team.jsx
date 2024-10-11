@@ -10,7 +10,7 @@ export const OurTeam = () => {
   return (
     <div className="our-team">
       <div className="container">
-        <h2 className="our-team_header">
+        <h2 className="dropShadow our-team_header">
           Meet the Chaos
           <span id="our-team" className="our-team_header-accent">
             {' '}
@@ -111,7 +111,7 @@ export const OurTeam = () => {
               </div>
             </div>
 
-            <ul className="our-team_info__text-section__list">
+            <ul className="autoBlur our-team_info__text-section__list">
               <li className="our-team_info__text-section__item">
                 We’re a team of six BFM students studying Crossmedia and doing
                 our super hyper mega important semester project.

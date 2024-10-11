@@ -32,18 +32,14 @@ export const Home = () => {
           </a>
         </div>
         <div className="home_middle-block">
-          <img
-            className="autoShow home_middle-block-image"
-            src={musick}
-            alt="mu-sick"
-          />
+          <img className="home_middle-block-image" src={musick} alt="mu-sick" />
           <span className="home_middle-block-text1">
             Welcome to the community where your music taste won’t make you an
             outsider. This is a space for musicians who dare to be different and
             for listeners who crave something real. If you’re sick of the same
             old radio-appropriate beats, you’re in the right place.
           </span>
-          <div className="jopa">
+          <div className="text2">
             <span className="home_middle-block-text2">
               We’re bringing the experimental stuff. The alternative stuff. The
               underground stuff.

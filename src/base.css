@@ -209,18 +209,98 @@ button {
 }
 
 .autoBlur {
-  animation: autoBlurAnimation both;
+  animation: autoBlur1Animation both;
+  animation-timeline: view(70% 0%);
+}
+
+@keyframes autoBlur1Animation {
+  from {
+    filter: blur(40px);
+    transform: translateY(150px) scale(0.7);
+  }
+  to {
+    filter: blur(0);
+    transform: translateY(0), scale(1);
+  }
+}
+
+.autoBlur2 {
+  animation: autoBlur2Animation both;
   animation-timeline: view();
 }
 
-@keyframes autoBlurAnimation {
+@keyframes autoBlur2Animation {
   0% {
-    filter: blur(40px);
-    transform: translateY(200px) scale(0.3);
+    filter: blur(30px);
+  }
+  45%,
+  70% {
+    filter: blur(0px);
   }
   100% {
-    filter: blur(0);
-    transform: translateY(0), scale(1);
+    filter: blur(30px);
+  }
+}
+
+.transitionLeft {
+  animation: transitionLeftAnimation both;
+  animation-timeline: view(90% 0%);
+}
+
+@keyframes transitionLeftAnimation {
+  from {
+    filter: blur(20px) opacity(0) drop-shadow(30px 10px crimson);
+    transform: translateX(-1000px);
+  }
+  to {
+    filter: blur(0px) opacity(1) drop-shadow(0px 0px crimson);
+  }
+}
+
+.dropShadow {
+  animation: dropShadowAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes dropShadowAnimation {
+  0% {
+    filter: blur(20px) drop-shadow(-30px 10px crimson);
+  }
+  10% {
+    filter: blur(15px) drop-shadow(80px -40px crimson);
+  }
+  20% {
+    filter: blur(10px) drop-shadow(-60px 50px crimson);
+  }
+  30% {
+    filter: blur(5px) drop-shadow(-80px 70px crimson);
+  }
+  40% {
+    filter: blur(0px) drop-shadow(90px -90px crimson);
+  }
+  50% {
+    filter: blur(0px) drop-shadow(70px 80px crimson);
+  }
+  60% {
+    filter: blur(0px) drop-shadow(-50px 60px crimson);
+  }
+  70% {
+    filter: blur(0px) drop-shadow(30px -40px crimson);
+  }
+  80% {
+    filter: blur(0px) drop-shadow(10px -30px crimson);
+  }
+  90% {
+    filter: blur(0px) drop-shadow(-20px 20px crimson);
+  }
+  80% {
+    filter: blur(0px) drop-shadow(-100px 100px crimson);
+  }
+  90% {
+    filter: blur(0px) drop-shadow(10px -10px crimson);
+  }
+  100% {
+    filter: blur(0px) drop-shadow(0px 0px crimson);
   }
 }
 
