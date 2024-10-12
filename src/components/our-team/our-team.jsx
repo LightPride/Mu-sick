@@ -18,7 +18,7 @@ export const OurTeam = () => {
           </span>{' '}
           <br /> Behind This Project
         </h2>
-        {window.innerWidth >= 1440 ? (
+        {window.innerWidth >= 1440 && (
           <div className="our-team_list">
             <div className="our-team_list-item">
               <img src={iryna} alt="" className="our-team_list-image" />
@@ -44,7 +44,8 @@ export const OurTeam = () => {
               <img src={ava} alt="" className="our-team_list-image" />
             </div>
           </div>
-        ) : (
+        )}
+        {window.innerWidth >= 768 && window.innerWidth < 1440 && (
           <>
             <div className="our-team_list">
               <div className="our-team_list-item">
@@ -69,8 +70,31 @@ export const OurTeam = () => {
               </div>
             </div>
           </>
+        )}{' '}
+        {window.innerWidth < 768 && (
+          <>
+            <div className="our-team_list">
+              <div className="our-team_list-item">
+                <img src={iryna} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={andrii} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={bren} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={taras} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={vlad} alt="" className="our-team_list-image" />
+              </div>
+              <div className="our-team_list-item">
+                <img src={ava} alt="" className="our-team_list-image" />
+              </div>
+            </div>
+          </>
         )}
-
         <div className="our-team_info">
           <span className="navigation-label">{'[Our Team]'}</span>
 
