@@ -15,6 +15,21 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const isNotAppleDevice = () => {
+    return (
+      !/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) || window.MSStream
+    );
+  };
+
+  useEffect(() => {
+    if (isNotAppleDevice()) {
+      console.log('Win');
+      document.body.classList.add('not-mac-user');
+    } else {
+      document.body.classList.remove('not-apple-device');
+    }
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);

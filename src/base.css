@@ -153,45 +153,43 @@ button {
   background: rgb(155, 64, 12);
 }
 
-@media screen and (max-width: 767px) {
-  .auto-rotate {
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    z-index: -1;
-    width: 300px;
-    height: 300px;
-    animation: autoRotateAnimation;
-    animation-timeline: view();
+body.not-mac-user .autoBlur2 {
+  animation: autoBlur2Animation both;
+  animation-timeline: view();
+}
+
+@keyframes autoBlur2Animation {
+  0% {
+    filter: blur(30px);
+  }
+  45%,
+  70% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(30px);
   }
 }
 
-@media screen and (max-width: 600px) {
-  .auto-rotate {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    z-index: -1;
-    width: 250px;
-    height: 250px;
-    animation: none;
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+  animation: SiteStartFilter 4s ease-in;
+}
+
+@keyframes SiteStartFilter {
+  75% {
+    backdrop-filter: blur(3px);
+  }
+  100% {
+    backdrop-filter: blur(0);
   }
 }
 
-@media screen and (min-width: 768px) {
-  .auto-rotate {
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    z-index: -1;
-    width: 300px;
-    height: 300px;
-    animation: autoRotateAnimation;
-    animation-timeline: view();
-  }
-}
-
-@keyframes autoRotateAnimation {
+/* @keyframes autoRotateAnimation {
   from {
     transform: rotate(360deg);
   }
@@ -234,27 +232,9 @@ button {
     filter: blur(0);
     transform: translateY(0), scale(1);
   }
-}
+} */
 
-.autoBlur2 {
-  animation: autoBlur2Animation both;
-  animation-timeline: view();
-}
-
-@keyframes autoBlur2Animation {
-  0% {
-    filter: blur(30px);
-  }
-  45%,
-  70% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(30px);
-  }
-}
-
-.transitionLeft {
+/* .transitionLeft {
   animation: transitionLeftAnimation both;
   animation-timeline: view(90% 0%);
 }
@@ -314,22 +294,4 @@ button {
   100% {
     filter: blur(0px) drop-shadow(-70px -70px crimson);
   }
-}
-
-.backdrop {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
-  pointer-events: none;
-  animation: SiteStartFilter 4s ease-in;
-}
-
-@keyframes SiteStartFilter {
-  75% {
-    backdrop-filter: blur(3px);
-  }
-  100% {
-    backdrop-filter: blur(0);
-  }
-}
+} */

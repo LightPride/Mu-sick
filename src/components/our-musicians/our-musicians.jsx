@@ -11,6 +11,7 @@ import kristjanBg from '../../assets/backgrounds/bg-kristjan.webp';
 import coffinDodgerBg from '../../assets/backgrounds/bg-coffin-dodger.webp';
 import shape3 from '../../assets/shapes/3.webp';
 import shape4 from '../../assets/shapes/4.webp';
+import { useSpring, animated } from '@react-spring/web';
 
 const musicians = [
   {
@@ -94,9 +95,29 @@ export const OurMusicians = () => {
     };
   }, [selectedMusician]);
 
+  const styles = useSpring({
+    loop: true,
+    to: [
+      {
+        transform: 'translateY(-20px)',
+      },
+      {
+        transform: 'translateY(0px)',
+      },
+    ],
+    from: {
+      transform: 'translateY(0px)',
+    },
+    config: { duration: 1500, easing: (t) => t },
+  });
+
   return (
     <section className="our-musicians">
-      <img className="our-musicians-shape4" src={shape4} />
+      <animated.img
+        style={styles}
+        className="our-musicians-shape4"
+        src={shape4}
+      />
       <div
         className={`our-musicians_card-bg ${fade ? 'fade-out' : 'fade-in'}`}
         style={{
@@ -105,6 +126,7 @@ export const OurMusicians = () => {
       ></div>
       <div className="container relative">
         <img
+          id="our-musicians"
           className={`our-musicians-shape3 ${fade ? 'fade-out' : 'fade-in'}`}
           src={shape3}
         />

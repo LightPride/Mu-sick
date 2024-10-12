@@ -1,13 +1,31 @@
+import { useInView, animated } from '@react-spring/web';
 import Icons from '../../assets/svg/sprite.svg';
-// import './footer.css';
 
 export const Footer = () => {
+  const [ref, styles] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 200,
+        filter: 'blur(20px) drop-shadow(30px 10px crimson) ',
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px) drop-shadow(0px 0px crimson)',
+      },
+    }),
+    {
+      rootMargin: '0% 0%',
+    }
+  );
   return (
     <section className="footer container">
       <div className="footer-title__wrapper">
-        <h2 className=" transitionLeft footer-title">
-          <span className="footer-title__span">©</span>MÜ-SICK
-        </h2>
+        <animated.h2 ref={ref} style={styles} className="footer-title">
+          <span className="footer-title__span">©</span>
+          MÜ-SICK
+        </animated.h2>
       </div>
 
       <div className="footer-content">

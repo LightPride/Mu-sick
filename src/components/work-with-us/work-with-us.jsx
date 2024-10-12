@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Icons from '../../assets/svg/sprite.svg';
 import Typed from 'typed.js';
 import rotatingShape from '../../assets/shapes/5.webp';
+import { useInView, animated, useSpring } from '@react-spring/web';
 
 export const WorkWithUs = () => {
   const el = useRef(null);
@@ -19,19 +20,58 @@ export const WorkWithUs = () => {
     };
   }, []);
 
+  const styles1 = useSpring({
+    loop: true,
+    to: [
+      {
+        transform: 'translateY(-20px)',
+      },
+      {
+        transform: 'translateY(0px)',
+      },
+    ],
+    from: {
+      transform: 'translateY(0px)',
+    },
+    config: { duration: 1500, easing: (t) => t },
+  });
+
+  const [ref, styles] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        y: 500,
+        filter: 'blur(20px) drop-shadow(30px 10px crimson) ',
+      },
+      to: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px) drop-shadow(0px 0px crimson)',
+      },
+    }),
+    {
+      rootMargin: '0% 0%',
+    }
+  );
+
   return (
     <section className="workWithUs container">
-      <img
+      <animated.img
+        style={styles1}
         src={rotatingShape}
-        className="work-with-us-shape5 auto-rotate"
-      ></img>
+        className="work-with-us-shape5"
+      ></animated.img>
       <span className="navigation-label">{'[work with us]'}</span>
-      <div className="workWithUs-titles__wrapper">
+      <animated.div
+        ref={ref}
+        style={styles}
+        className="workWithUs-titles__wrapper"
+      >
         <h2 className="transitionLeft workWithUs-title">
           <span className="workWithUs-title__span">got {'[beats]'}?</span>
           <span ref={el} />
         </h2>
-      </div>
+      </animated.div>
 
       <a
         href="https://linktr.ee/musick.project"

@@ -258,7 +258,23 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .our-musicians_names {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .our-musicians_name:hover,
+  .our-musicians_name:focus {
+    color: var(--primary-red);
+  }
+  .our-musicians_name.active {
+    color: var(--primary-red);
+    transform: translateX(20px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .our-musicians_names {
     display: flex;
     flex-direction: column;
@@ -292,6 +308,7 @@
   }
 
   .our-musicians-spacing {
+    gap: 25px;
     flex-direction: column-reverse;
   }
 
