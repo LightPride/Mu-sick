@@ -9,6 +9,8 @@ import barramundiBg from '../../assets/backgrounds/bg-barramundi.webp';
 import devourBg from '../../assets/backgrounds/bg-devour.webp';
 import kristjanBg from '../../assets/backgrounds/bg-kristjan.webp';
 import coffinDodgerBg from '../../assets/backgrounds/bg-coffin-dodger.webp';
+import shape3 from '../../assets/shapes/3.webp';
+import shape4 from '../../assets/shapes/4.webp';
 
 const musicians = [
   {
@@ -71,8 +73,8 @@ export const OurMusicians = () => {
 
       setTimeout(() => {
         setFade(false);
-      }, 200);
-    }, 300);
+      }, 400);
+    }, 400);
   };
 
   const el = useRef(null);
@@ -94,7 +96,18 @@ export const OurMusicians = () => {
 
   return (
     <section className="our-musicians">
-      <div className="container">
+      <img className="our-musicians-shape4" src={shape4} />
+      <div
+        className={`our-musicians_card-bg ${fade ? 'fade-out' : 'fade-in'}`}
+        style={{
+          backgroundImage: `url(${musiciansBgs[selectedMusician.bg]})`,
+        }}
+      ></div>
+      <div className="container relative">
+        <img
+          className={`our-musicians-shape3 ${fade ? 'fade-out' : 'fade-in'}`}
+          src={shape3}
+        />
         <span className="navigation-label">
           {'[The faces of the underground]'}
         </span>
@@ -144,15 +157,6 @@ export const OurMusicians = () => {
                 {selectedMusician.text4}
               </p>
             </div>
-
-            <div
-              className={`our-musicians_card-bg ${
-                fade ? 'fade-out' : 'fade-in'
-              }`}
-              style={{
-                backgroundImage: `url(${musiciansBgs[selectedMusician.bg]})`,
-              }}
-            ></div>
           </div>
 
           <div className="our-musicians_names">
