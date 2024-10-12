@@ -1,5 +1,7 @@
 import shape1 from '../../assets/shapes/1.webp';
 import shape2 from '../../assets/shapes/2.webp';
+import { toast } from 'react-toastify';
+
 export const EventComponent = () => {
   return (
     <>
@@ -7,7 +9,6 @@ export const EventComponent = () => {
         <h3 id="pre-register" className="navigation-label">
           [event]
         </h3>
-
         <div className="event-block">
           <img className="autoBlur2 event-shape1" src={shape1} />
           <img className="autoBlur2 event-shape2" src={shape2} />
@@ -53,9 +54,27 @@ export const EventComponent = () => {
           <form
             onSubmit={(evt) => {
               evt.preventDefault();
-              console.log(evt);
+              const form = evt.currentTarget;
+              const payload = {
+                name: form.elements.name.value.trim(),
+                email: form.elements.email.value.trim(),
+              };
+              fetch('https://mu-sick-api.vercel.app/api/mails/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+              }).then((response) => {
+                if (!response.ok) {
+                  toast.error(`Something went wrong`);
+                } else if (response.ok) {
+                  toast.success(
+                    `Pre-Registration Successful, Please Check Your Email!`
+                  );
+                }
+              });
+              form.elements.name.value = '';
+              form.elements.email.value = '';
             }}
-            id="pre-register"
             className="autoBlur2 event-register-form"
           >
             <div className="event-register-form_container">
@@ -78,6 +97,7 @@ export const EventComponent = () => {
                   type="text"
                   name="name"
                   placeholder="NAME"
+                  required
                 />
               </label>
 
@@ -86,18 +106,14 @@ export const EventComponent = () => {
                   className="event-register-form_input event-register-form_email"
                   type="email"
                   name="email"
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   title="Please enter a valid email address"
                   placeholder="EMAIL"
+                  required
                 />
               </label>
             </div>
 
-            <button
-              className="event-register-form_button"
-              type="submit"
-              form="pre-register"
-            >
+            <button className="event-register-form_button" type="submit">
               Pre-Register
             </button>
           </form>

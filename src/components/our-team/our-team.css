@@ -19,6 +19,7 @@
 }
 
 .our-team_list {
+  position: relative;
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -41,6 +42,24 @@
     object-fit: cover;
     width: 180px;
     height: 220px;
+  }
+
+  .our-team_list .our-team_list-item {
+    transition: 0.5s;
+    filter: saturate(0);
+  }
+
+  .our-team_list .our-team_list-item:hover {
+    filter: saturate(1);
+    transform: translateZ(100px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .our-team_list-image {
+    object-fit: cover;
+    width: 100px;
+    height: 140px;
   }
 
   .our-team_list .our-team_list-item {

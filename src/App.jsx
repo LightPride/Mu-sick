@@ -10,6 +10,8 @@ import { Footer } from './components/footer';
 import { EventComponent } from './components/event/event';
 import { useEffect, useState } from 'react';
 import { Loader } from './components/loader';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +35,7 @@ function App() {
         <WorkWithUs />
         <News />
         <OurTeam />
+        <ToastContainer theme="dark" closeOnClick />
       </main>
       <Footer />
     </>
