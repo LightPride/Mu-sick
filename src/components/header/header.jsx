@@ -121,7 +121,7 @@ export const Header = () => {
         </div>
       </header>
 
-      <div className="header-btn__mobile_wrapper">
+      <div className="header-btn__mobile_wrapper container">
         <svg
           className={`header-logo__mobile ${
             visible ? 'header-btn__hidden' : 'header-btn__visible'
@@ -129,19 +129,19 @@ export const Header = () => {
         >
           <use href={`${Icons}#logo`} width="100%" height="100%"></use>
         </svg>
-      </div>
 
-      <button
-        className={`header-btn ${
-          visible ? 'header-btn__hidden' : 'header-btn__visible'
-        }`}
-        onClick={() => setVisible(true)}
-      >
-        <span>V</span>
-        <svg className="header-btn__icon">
-          <use href={`${Icons}#burger`} width="100%" height="100%"></use>
-        </svg>
-      </button>
+        <button
+          className={`header-btn ${
+            visible ? 'header-btn__hidden' : 'header-btn__visible'
+          }`}
+          onClick={() => setVisible(true)}
+        >
+          <span>↓</span>
+          <svg className="header-btn__icon">
+            <use href={`${Icons}#burger`} width="100%" height="100%"></use>
+          </svg>
+        </button>
+      </div>
     </>
   );
 };
