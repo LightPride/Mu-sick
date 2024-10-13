@@ -192,11 +192,11 @@
   margin-top: 20px;
 }
 
-body.not-mac-user .event-register-form_input-label {
+.event-register-form_input-label {
   position: relative;
   overflow: hidden;
 }
-body.not-mac-user .event-register-form_input-label::before {
+.event-register-form_input-label::before {
   content: '';
   position: absolute;
   bottom: 0;
