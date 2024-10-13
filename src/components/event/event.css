@@ -193,17 +193,11 @@
   margin-top: 20px;
 }
 
-.event-register-form_input-label {
+body.not-mac-user .event-register-form_input-label {
   position: relative;
   overflow: hidden;
-  display: none;
 }
-
-body.not-mac-user .event-register-form_input-label {
-  display: inline-block;
-}
-
-.event-register-form_input-label::before {
+body.not-mac-user .event-register-form_input-label::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -215,7 +209,7 @@ body.not-mac-user .event-register-form_input-label {
   transition: 300ms;
 }
 
-.event-register-form_input-label:focus-within::before {
+body.not-mac-user .event-register-form_input-label:focus-within::before {
   left: 0;
 }
 
