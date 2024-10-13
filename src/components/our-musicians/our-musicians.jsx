@@ -126,11 +126,10 @@ export const OurMusicians = () => {
       ></div>
       <div className="container relative">
         <img
-          id="our-musicians"
           className={`our-musicians-shape3 ${fade ? 'fade-out' : 'fade-in'}`}
           src={shape3}
         />
-        <span className="navigation-label">
+        <span id="our-musicians" className="navigation-label">
           {'[The faces of the underground]'}
         </span>
 
