@@ -198,6 +198,10 @@
   overflow: hidden;
 }
 
+body.not-mac-user .event-register-form_input-label {
+  display: none;
+}
+
 .event-register-form_input-label::before {
   content: '';
   position: absolute;
