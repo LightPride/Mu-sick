@@ -256,6 +256,10 @@
   .our-musicians_name.active {
     color: var(--primary-red);
   }
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: -190px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -271,6 +275,10 @@
   .our-musicians_name.active {
     color: var(--primary-red);
     transform: translateX(20px);
+  }
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: -190px;
   }
 }
 
