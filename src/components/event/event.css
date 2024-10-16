@@ -53,6 +53,7 @@
 .event-cards_date-card_container {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .event-cards_date-card_wrapper {

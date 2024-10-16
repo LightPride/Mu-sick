@@ -22,7 +22,7 @@ export const EventComponent = () => {
                 <span className="event-cards_date-card_date">Date:</span>
 
                 <span className="event-cards_date-card_date-text">
-                  16✱11✱2024
+                  16✱11✱2024 / Doors open 20:00
                 </span>
               </div>
 
